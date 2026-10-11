@@ -1,0 +1,1769 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audrey Cecilia | Portfolio & Editorial Works</title>
+
+    <!-- Google Fonts: Playfair Display (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration with Exact Custom Palette -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              // The 3 exact palette colors from image:
+              buttermilk: "#FFF1B5",
+              "pastel-blue": "#C1DBE8",
+              burgundy: "#43302E",
+              // Harmonious soft tints:
+              "buttermilk-light": "#FFF8D9",
+              "pastel-blue-light": "#E3EEF5",
+              "pastel-blue-dark": "#A3C8DC",
+              "burgundy-light": "#5A4240",
+              "burgundy-muted": "#6B5452",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      :root {
+        --color-buttermilk: #fff1b5;
+        --color-pastel-blue: #c1dbe8;
+        --color-burgundy: #43302e;
+      }
+
+      body {
+        background-color: #fffdf4;
+        color: #43302e;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      /* Subtle paper noise / vintage texture feeling */
+      .bg-grain {
+        background-color: #fffdf4;
+        background-image: radial-gradient(
+          rgba(67, 48, 46, 0.04) 1px,
+          transparent 0
+        );
+        background-size: 24px 24px;
+      }
+
+      .vintage-shadow {
+        box-shadow: 4px 4px 0px 0px #43302e;
+      }
+
+      .vintage-shadow-sm {
+        box-shadow: 2px 2px 0px 0px #43302e;
+      }
+
+      .vintage-shadow-hover {
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .vintage-shadow-hover:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px 0px #43302e;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff8d9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1dbe8;
+        border: 2px solid #fff8d9;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #43302e;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-grain min-h-screen text-burgundy selection:bg-buttermilk selection:text-burgundy relative overflow-x-hidden"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#FFFDF4]/90 backdrop-blur-md border-b-2 border-burgundy"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Monogram / Vintage Logo -->
+          <a href="#home" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 rounded-full bg-buttermilk border-2 border-burgundy flex items-center justify-center font-serif font-bold text-burgundy text-lg vintage-shadow-sm group-hover:bg-pastel-blue transition-colors"
+            >
+              AC
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="font-serif font-bold tracking-tight text-lg text-burgundy leading-none"
+              >
+                Audrey Cecilia
+              </span>
+              <span
+                class="text-[11px] font-sans tracking-widest uppercase text-burgundy-muted mt-1 font-semibold"
+              >
+                Portfolio &bull; Est. 2026
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+            <a
+              href="#home"
+              class="px-4 py-2 rounded-full text-sm font-semibold text-burgundy hover:bg-buttermilk transition-all"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="px-4 py-2 rounded-full text-sm font-semibold text-burgundy hover:bg-buttermilk transition-all"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="px-4 py-2 rounded-full text-sm font-semibold text-burgundy hover:bg-buttermilk transition-all"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="px-4 py-2 rounded-full text-sm font-semibold text-burgundy hover:bg-buttermilk transition-all"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="px-4 py-2 rounded-full text-sm font-semibold text-burgundy hover:bg-buttermilk transition-all"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- Right Call to Action -->
+          <div class="hidden md:flex items-center gap-3">
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-burgundy hover:bg-burgundy-light text-buttermilk border-2 border-burgundy vintage-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+            >
+              <span>Hire Me</span>
+              <i
+                data-lucide="arrow-up-right"
+                class="w-4 h-4 text-pastel-blue"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Trigger -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-toggle"
+              type="button"
+              class="p-2 rounded-lg text-burgundy hover:bg-buttermilk border border-burgundy transition-colors"
+              aria-label="Toggle navigation"
+            >
+              <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-b-2 border-burgundy bg-buttermilk-light px-6 py-6 space-y-3"
+      >
+        <a
+          href="#home"
+          class="mobile-link block py-2 text-base font-serif font-bold text-burgundy border-b border-burgundy/15"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="mobile-link block py-2 text-base font-serif font-bold text-burgundy border-b border-burgundy/15"
+          >About</a
+        >
+        <a
+          href="#projects"
+          class="mobile-link block py-2 text-base font-serif font-bold text-burgundy border-b border-burgundy/15"
+          >Projects</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link block py-2 text-base font-serif font-bold text-burgundy border-b border-burgundy/15"
+          >Skills</a
+        >
+        <a
+          href="#contact"
+          class="mobile-link block py-2 text-base font-serif font-bold text-burgundy"
+          >Contact</a
+        >
+        <div class="pt-3">
+          <a
+            href="#contact"
+            class="mobile-link flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-burgundy text-buttermilk vintage-shadow-sm"
+          >
+            <span>Let's Talk</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-pastel-blue"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <section
+        id="home"
+        class="min-h-[calc(100vh-5rem)] flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8 border-b-2 border-burgundy/20"
+      >
+        <div
+          class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        >
+          <!-- Hero Text -->
+          <div
+            class="lg:col-span-7 space-y-5 text-center lg:text-left lg:-translate-y-1"
+          >
+            <h1
+              class="text-4xl sm:text-6xl lg:text-6xl font-serif font-bold tracking-tight text-burgundy leading-[1.15]"
+            >
+              Crafting thoughtful
+              <span
+                class="italic font-normal underline decoration-pastel-blue decoration-wavy decoration-2"
+                >systems</span
+              >
+              & timeless digital works.
+            </h1>
+
+            <p
+              class="text-base sm:text-lg text-burgundy-muted max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal"
+            >
+              Hi, I’m <strong>Audrey Cecilia</strong> — an adaptable Information
+              Systems student passionate about web development, database
+              management, and deriving meaningful data insights, with a strong
+              drive to continuously learn new technologies.
+            </p>
+
+            <!-- Hero Buttons -->
+            <div
+              class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start items-center"
+            >
+              <a
+                href="#projects"
+                class="px-6 py-3.5 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider bg-burgundy text-buttermilk border-2 border-burgundy vintage-shadow vintage-shadow-hover inline-flex items-center gap-2"
+              >
+                <span>View Works</span>
+                <i
+                  data-lucide="arrow-down"
+                  class="w-4 h-4 text-pastel-blue"
+                ></i>
+              </a>
+
+              <a
+                href="#contact"
+                class="px-6 py-3.5 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider bg-pastel-blue text-burgundy border-2 border-burgundy vintage-shadow vintage-shadow-hover inline-flex items-center gap-2"
+              >
+                <span>Get in Touch</span>
+                <i data-lucide="mail" class="w-4 h-4 text-burgundy"></i>
+              </a>
+            </div>
+
+            <!-- Quick badges -->
+            <div
+              class="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-serif text-burgundy"
+            >
+              <span
+                class="px-3 py-1.5 rounded-lg bg-buttermilk/60 border border-burgundy/30"
+                ># Web Development</span
+              >
+              <span
+                class="px-3 py-1.5 rounded-lg bg-pastel-blue/60 border border-burgundy/30"
+                ># SQL & Databases</span
+              >
+              <span
+                class="px-3 py-1.5 rounded-lg bg-buttermilk/60 border border-burgundy/30"
+                ># ETL & Data Warehouse</span
+              >
+            </div>
+          </div>
+
+          <!-- Hero Visual / Editorial Portrait Frame -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-[280px] lg:max-w-[350px]">
+              <!-- Foreground card -->
+              <div
+                class="relative bg-buttermilk rounded-3xl p-6 sm:p-8 border-2 border-burgundy vintage-shadow flex flex-col items-center text-center space-y-3"
+              >
+                <!-- Gambar Foto -->
+                <div
+                  class="w-full h-full rounded-2xl overflow-hidden bg-white/40 border border-burgundy/20"
+                >
+                  <img
+                    src="foto.jpeg"
+                    alt="Foto Profil Audrey C."
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+                <div>
+                  <h3 class="font-serif font-bold text-xl text-burgundy">
+                    Audrey Cecilia
+                  </h3>
+                  <p
+                    class="text-xs uppercase tracking-widest text-burgundy-muted font-semibold mt-1"
+                  >
+                    Information Systems Student &bull; Jakarta
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b-2 border-burgundy/20"
+      >
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-xs font-bold tracking-widest uppercase text-burgundy bg-pastel-blue px-3 py-1 rounded-full border border-burgundy"
+            >How I Work</span
+          >
+          <h2
+            class="mt-3 text-3xl sm:text-4xl font-serif font-bold text-burgundy"
+          >
+            From Question to Insight
+          </h2>
+          <p class="mt-2 text-burgundy-muted text-sm sm:text-base">
+            My approach to data: start with the problem, build a reliable
+            foundation, and make the result easy for anyone to understand.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Step 1 -->
+          <div
+            class="relative bg-pastel-blue rounded-3xl p-8 border-2 border-burgundy vintage-shadow"
+          >
+            <div class="flex items-center justify-between mb-5">
+              <div
+                class="w-12 h-12 rounded-2xl bg-buttermilk border-2 border-burgundy flex items-center justify-center text-burgundy"
+              >
+                <i data-lucide="search" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif font-bold text-3xl text-burgundy/40"
+                >01</span
+              >
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-burgundy">
+              Understand the Question
+            </h3>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mt-1"
+            >
+              Business Context
+            </h4>
+            <p class="text-sm text-burgundy mt-3 leading-relaxed">
+              Clarify the business question first: what decision needs support,
+              who will use the answer, and what data is actually needed.
+            </p>
+            <div
+              class="hidden md:flex absolute -right-9 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[#FFFDF4] border-2 border-burgundy items-center justify-center text-burgundy"
+            >
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="relative bg-buttermilk rounded-3xl p-8 border-2 border-burgundy vintage-shadow"
+          >
+            <div class="flex items-center justify-between mb-5">
+              <div
+                class="w-12 h-12 rounded-2xl bg-pastel-blue border-2 border-burgundy flex items-center justify-center text-burgundy"
+              >
+                <i data-lucide="database" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif font-bold text-3xl text-burgundy/40"
+                >02</span
+              >
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-burgundy">
+              Model &amp; Clean
+            </h3>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mt-1"
+            >
+              SQL · Star Schema · ETL
+            </h4>
+            <p class="text-sm text-burgundy mt-3 leading-relaxed">
+              Design the schema, build ETL routines, and validate data quality
+              so every number can be trusted.
+            </p>
+            <div
+              class="hidden md:flex absolute -right-9 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[#FFFDF4] border-2 border-burgundy items-center justify-center text-burgundy"
+            >
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="relative bg-pastel-blue-light rounded-3xl p-8 border-2 border-burgundy vintage-shadow"
+          >
+            <div class="flex items-center justify-between mb-5">
+              <div
+                class="w-12 h-12 rounded-2xl bg-white border-2 border-burgundy flex items-center justify-center text-burgundy"
+              >
+                <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif font-bold text-3xl text-burgundy/40"
+                >03</span
+              >
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-burgundy">
+              Visualize &amp; Explain
+            </h3>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mt-1"
+            >
+              Dashboards · Storytelling
+            </h4>
+            <p class="text-sm text-burgundy mt-3 leading-relaxed">
+              Turn results into clear dashboards and explain the "so what" so
+              non-technical teams can act on it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="mt-14 flex flex-wrap items-center justify-center gap-4">
+          <div class="flex items-center gap-2 mr-2">
+            <span
+              class="w-3 h-3 rounded-full bg-green-500 border border-burgundy"
+            ></span>
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-burgundy"
+              >Open to Internships</span
+            >
+          </div>
+          <a
+            href="#projects"
+            class="px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider bg-burgundy text-buttermilk border-2 border-burgundy vintage-shadow vintage-shadow-hover inline-flex items-center gap-2"
+          >
+            <span>View Works</span>
+            <i data-lucide="arrow-down" class="w-4 h-4 text-pastel-blue"></i>
+          </a>
+          <button
+            onclick="downloadResumeNotice()"
+            class="px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider bg-pastel-blue text-burgundy border-2 border-burgundy vintage-shadow vintage-shadow-hover inline-flex items-center gap-2"
+          >
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Download CV</span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b-2 border-burgundy/20"
+      >
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span
+            class="text-xs font-bold tracking-widest uppercase text-burgundy bg-buttermilk px-3 py-1 rounded-full border border-burgundy"
+            >Curated Archive</span
+          >
+          <h2
+            class="mt-3 text-3xl sm:text-4xl font-serif font-bold text-burgundy"
+          >
+            Featured Projects
+          </h2>
+          <p class="mt-2 text-burgundy-muted text-sm sm:text-base">
+            Explore selected works in web platforms, data modeling, and
+            interface experiences.
+          </p>
+
+          <!-- Filter Tabs styled with the palette -->
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+            <button
+              class="project-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-burgundy text-buttermilk border-2 border-burgundy vintage-shadow-sm"
+              data-filter="all"
+            >
+              All Works
+            </button>
+            <button
+              class="project-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white text-burgundy border-2 border-burgundy hover:bg-buttermilk"
+              data-filter="web"
+            >
+              Web Apps
+            </button>
+            <button
+              class="project-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white text-burgundy border-2 border-burgundy hover:bg-pastel-blue"
+              data-filter="data"
+            >
+              Data & BI
+            </button>
+            <button
+              class="project-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white text-burgundy border-2 border-burgundy hover:bg-buttermilk"
+              data-filter="uiux"
+            >
+              UI / UX
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
+          <!-- Project 1: PetCareHub -->
+          <div
+            class="project-card group bg-buttermilk-light rounded-3xl border-2 border-burgundy vintage-shadow flex flex-col justify-between overflow-hidden"
+            data-category="web"
+          >
+            <div>
+              <!-- Banner Header -->
+              <div
+                class="h-48 bg-pastel-blue border-b-2 border-burgundy p-6 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div class="flex items-center justify-between z-10">
+                  <span
+                    class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-buttermilk text-burgundy border border-burgundy"
+                    >Fullstack Web</span
+                  >
+                  <span class="text-xs font-mono font-bold text-burgundy"
+                    >#01</span
+                  >
+                </div>
+                <div class="z-10 flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-buttermilk border-2 border-burgundy flex items-center justify-center text-burgundy"
+                  >
+                    <i data-lucide="paw-print" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-xl text-burgundy">
+                      PetCareHub Platform
+                    </h3>
+                    <p class="text-xs text-burgundy-muted font-medium">
+                      Veterinary Clinic & Medical Management
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-6">
+                <p class="text-burgundy text-sm leading-relaxed mb-6">
+                  A multi-role fullstack application managing clinic schedules,
+                  animal patient health cards, and medicine inventory with
+                  automated stock monitoring.
+                </p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Figma</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >PHP</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >MySQL</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Bootstrap / JS</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div
+              class="px-6 pb-6 pt-2 border-t-2 border-burgundy/15 flex items-center justify-between"
+            >
+              <button
+                onclick="openModal('petcare')"
+                class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-burgundy hover:underline"
+              >
+                <span>View Case Study</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 text-burgundy"
+                ></i>
+              </button>
+              <span class="text-xs font-serif italic text-burgundy-muted"
+                >Web Application</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 2: Weather Analytics -->
+          <div
+            class="project-card group bg-buttermilk-light rounded-3xl border-2 border-burgundy vintage-shadow flex flex-col justify-between overflow-hidden"
+            data-category="data"
+          >
+            <div>
+              <!-- Banner Header -->
+              <div
+                class="h-48 bg-buttermilk border-b-2 border-burgundy p-6 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div class="flex items-center justify-between z-10">
+                  <span
+                    class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-pastel-blue text-burgundy border border-burgundy"
+                    >Data Science</span
+                  >
+                  <span class="text-xs font-mono font-bold text-burgundy"
+                    >#02</span
+                  >
+                </div>
+                <div class="z-10 flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-pastel-blue border-2 border-burgundy flex items-center justify-center text-burgundy"
+                  >
+                    <i data-lucide="cloud-rain" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-xl text-burgundy">
+                      Cirebon Weather Study
+                    </h3>
+                    <p class="text-xs text-burgundy-muted font-medium">
+                      Climate Anomaly & Rainfall Forecasts
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-6">
+                <p class="text-burgundy text-sm leading-relaxed mb-6">
+                  Exploratory data analysis of historical climate data from BMKG
+                  Cirebon. Cleaned rainfall, humidity, and temperature data to
+                  uncover seasonal shifts and outlier events.
+                </p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Python</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Pandas</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Matplotlib</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Seaborn</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div
+              class="px-6 pb-6 pt-2 border-t-2 border-burgundy/15 flex items-center justify-between"
+            >
+              <button
+                onclick="openModal('weather')"
+                class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-burgundy hover:underline"
+              >
+                <span>View Case Study</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 text-burgundy"
+                ></i>
+              </button>
+              <span class="text-xs font-serif italic text-burgundy-muted"
+                >Research & Insights</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 3: Retail DWH -->
+          <div
+            class="project-card group bg-buttermilk-light rounded-3xl border-2 border-burgundy vintage-shadow flex flex-col justify-between overflow-hidden"
+            data-category="data"
+          >
+            <div>
+              <!-- Banner Header -->
+              <div
+                class="h-48 bg-pastel-blue border-b-2 border-burgundy p-6 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div class="flex items-center justify-between z-10">
+                  <span
+                    class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-buttermilk text-burgundy border border-burgundy"
+                    >Database / OLAP</span
+                  >
+                  <span class="text-xs font-mono font-bold text-burgundy"
+                    >#03</span
+                  >
+                </div>
+                <div class="z-10 flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-buttermilk border-2 border-burgundy flex items-center justify-center text-burgundy"
+                  >
+                    <i data-lucide="layers" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-xl text-burgundy">
+                      Retail Data Warehouse & ETL
+                    </h3>
+                    <p class="text-xs text-burgundy-muted font-medium">
+                      Customer Retention · SQL Server
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-6">
+                <p class="text-burgundy text-sm leading-relaxed mb-6">Dimensional data warehouse in SQL Server for customer retention analysis. I built the database structure, data cleansing, initial and incremental loads, and SCD Type 1 and 2. Group project.</p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >SQL Server</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >T-SQL</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Star Schema</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >ETL</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div
+              class="px-6 pb-6 pt-2 border-t-2 border-burgundy/15 flex items-center justify-between"
+            >
+              <button
+                onclick="openModal('dwh')"
+                class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-burgundy hover:underline"
+              >
+                <span>View Case Study</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 text-burgundy"
+                ></i>
+              </button>
+              <span class="text-xs font-serif italic text-burgundy-muted"
+                >Data Architecture</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 4: Lalala Festival UI/UX -->
+          <div
+            class="project-card group bg-buttermilk-light rounded-3xl border-2 border-burgundy vintage-shadow flex flex-col justify-between overflow-hidden"
+            data-category="uiux"
+          >
+            <div>
+              <!-- Banner Header -->
+              <div
+                class="h-48 bg-buttermilk border-b-2 border-burgundy p-6 flex flex-col justify-between relative overflow-hidden"
+              >
+                <div class="flex items-center justify-between z-10">
+                  <span
+                    class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-pastel-blue text-burgundy border border-burgundy"
+                    >UI Prototype</span
+                  >
+                  <span class="text-xs font-mono font-bold text-burgundy"
+                    >#04</span
+                  >
+                </div>
+                <div class="z-10 flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-pastel-blue border-2 border-burgundy flex items-center justify-center text-burgundy"
+                  >
+                    <i data-lucide="music" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-xl text-burgundy">
+                      Lalala Fest Web Concept
+                    </h3>
+                    <p class="text-xs text-burgundy-muted font-medium">
+                      Editorial Music Experience & Ticketing
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-6">
+                <p class="text-burgundy text-sm leading-relaxed mb-6">
+                  Created front-end prototypes for a forest music festival.
+                  Focused on legible schedules, artist bios, and quick ticket
+                  selection.
+                </p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white border border-burgundy/30 text-burgundy"
+                    >Prototyping</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div
+              class="px-6 pb-6 pt-2 border-t-2 border-burgundy/15 flex items-center justify-between"
+            >
+              <button
+                onclick="openModal('lalala')"
+                class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-burgundy hover:underline"
+              >
+                <span>View Case Study</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-3.5 h-3.5 text-burgundy"
+                ></i>
+              </button>
+              <span class="text-xs font-serif italic text-burgundy-muted"
+                >UI / Experience</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b-2 border-burgundy/20"
+      >
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-xs font-bold tracking-widest uppercase text-burgundy bg-pastel-blue px-3 py-1 rounded-full border border-burgundy"
+            >Competencies</span
+          >
+          <h2
+            class="mt-3 text-3xl sm:text-4xl font-serif font-bold text-burgundy"
+          >
+            Skills & Toolset
+          </h2>
+          <p class="mt-2 text-burgundy-muted text-sm sm:text-base">
+            A balanced blend of analytical capabilities, backend logic, and
+            front-of-house aesthetics.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Skill Group 1: Engineering & Web -->
+          <div
+            class="bg-buttermilk-light rounded-3xl p-8 border-2 border-burgundy vintage-shadow flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-buttermilk border-2 border-burgundy flex items-center justify-center text-burgundy mb-5"
+              >
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-burgundy mb-1">
+                Development
+              </h3>
+              <p class="text-xs text-burgundy-muted mb-6">
+                Clean semantic markup, APIs, and modern architecture.
+              </p>
+
+              <div class="space-y-4">
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>HTML5 / Modern CSS</span>
+                    <span>75%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>PHP</span>
+                    <span>70%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>JavaScript</span>
+                    <span>60%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-6 mt-6 border-t-2 border-burgundy/15 flex flex-wrap gap-2"
+            >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-buttermilk border border-burgundy text-burgundy"
+                >REST APIs</span
+              >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-buttermilk border border-burgundy text-burgundy"
+                >Component Design</span
+              >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-buttermilk border border-burgundy text-burgundy"
+                >Responsive</span
+              >
+            </div>
+          </div>
+
+          <!-- Skill Group 2: Data & Database -->
+          <div
+            class="bg-pastel-blue rounded-3xl p-8 border-2 border-burgundy vintage-shadow flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-white border-2 border-burgundy flex items-center justify-center text-burgundy mb-5"
+              >
+                <i data-lucide="database" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-burgundy mb-1">
+                Data & Systems
+              </h3>
+              <p class="text-xs text-burgundy-muted mb-6">
+                Relational schemas, dimensional modeling, and analytics.
+              </p>
+
+              <div class="space-y-4">
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>MySQL</span>
+                    <span>90%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>SQL Server</span>
+                    <span>82%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 82%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>Python (Pandas, Numpy)</span>
+                    <span>80%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-6 mt-6 border-t-2 border-burgundy/15 flex flex-wrap gap-2"
+            >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white border border-burgundy text-burgundy"
+                >Star Schema</span
+              >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white border border-burgundy text-burgundy"
+                >ETL Logic</span
+              >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white border border-burgundy text-burgundy"
+                >EDA</span
+              >
+            </div>
+          </div>
+
+          <!-- Skill Group 3: Design & Workflow -->
+          <div
+            class="bg-buttermilk rounded-3xl p-8 border-2 border-burgundy vintage-shadow flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-pastel-blue border-2 border-burgundy flex items-center justify-center text-burgundy mb-5"
+              >
+                <i data-lucide="pen-tool" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-burgundy mb-1">
+                Design & Workflow
+              </h3>
+              <p class="text-xs text-burgundy-muted mb-6">
+                User journeys, wireframing tools, and git workflows.
+              </p>
+
+              <div class="space-y-4">
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>Figma & Prototyping</span>
+                    <span>84%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 84%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>Git & Version Control</span>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex justify-between text-xs font-bold text-burgundy mb-1"
+                  >
+                    <span>SSMS & DBeaver</span>
+                    <span>86%</span>
+                  </div>
+                  <div
+                    class="h-2 w-full bg-white rounded-full border border-burgundy/40 overflow-hidden p-0.5"
+                  >
+                    <div
+                      class="h-full bg-burgundy rounded-full"
+                      style="width: 86%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-6 mt-6 border-t-2 border-burgundy/15 flex flex-wrap gap-2"
+            >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-pastel-blue border border-burgundy text-burgundy"
+                >Agile / Scrum</span
+              >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-pastel-blue border border-burgundy text-burgundy"
+                >Postman</span
+              >
+              <span
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-pastel-blue border border-burgundy text-burgundy"
+                >Editorial UX</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      >
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-xs font-bold tracking-widest uppercase text-burgundy bg-buttermilk px-3 py-1 rounded-full border border-burgundy"
+            >Get In Touch</span
+          >
+          <h2
+            class="mt-3 text-3xl sm:text-4xl font-serif font-bold text-burgundy"
+          >
+            Let's Create Together
+          </h2>
+          <p class="mt-2 text-burgundy-muted text-sm sm:text-base">
+            Have an opening, collaboration, or idea? Leave a letter below.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Info Cards -->
+          <div class="lg:col-span-5 space-y-4">
+            <div
+              class="bg-buttermilk-light rounded-3xl p-6 border-2 border-burgundy vintage-shadow flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 rounded-2xl bg-buttermilk border-2 border-burgundy flex items-center justify-center text-burgundy shrink-0"
+              >
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-burgundy-muted"
+                  >Email Direct</span
+                >
+                <a
+                  href="mailto:audreyycecil@gmail.com"
+                  class="block font-serif font-bold text-base text-burgundy hover:underline"
+                >
+                  audreyycecil@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-pastel-blue rounded-3xl p-6 border-2 border-burgundy vintage-shadow flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 rounded-2xl bg-white border-2 border-burgundy flex items-center justify-center text-burgundy shrink-0"
+              >
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-burgundy-muted"
+                  >Station</span
+                >
+                <div class="font-serif font-bold text-base text-burgundy">
+                  Jakarta, Indonesia
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-buttermilk rounded-3xl p-6 border-2 border-burgundy vintage-shadow"
+            >
+              <span
+                class="text-xs font-bold uppercase tracking-wider text-burgundy-muted block mb-3"
+                >Connect Socially</span
+              >
+              <div class="flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/in/audreycecilia"
+                  target="_blank"
+                  class="px-4 py-2 rounded-full bg-white border border-burgundy text-burgundy text-xs font-bold inline-flex items-center gap-2 hover:bg-pastel-blue transition-colors"
+                >
+                  <i data-lucide="linkedin" class="w-4 h-4"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  class="px-4 py-2 rounded-full bg-white border border-burgundy text-burgundy text-xs font-bold inline-flex items-center gap-2 hover:bg-pastel-blue transition-colors"
+                >
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  class="px-4 py-2 rounded-full bg-white border border-burgundy text-burgundy text-xs font-bold inline-flex items-center gap-2 hover:bg-pastel-blue transition-colors"
+                >
+                  <i data-lucide="instagram" class="w-4 h-4"></i>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Box -->
+          <div
+            class="lg:col-span-7 bg-white rounded-3xl p-8 border-2 border-burgundy vintage-shadow relative"
+          >
+            <form id="portfolio-contact-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-xs font-bold uppercase tracking-wider text-burgundy mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    placeholder="e.g. Maya Lin"
+                    class="w-full px-4 py-3 rounded-2xl bg-buttermilk-light border-2 border-burgundy text-burgundy placeholder-burgundy/40 text-sm focus:outline-none focus:bg-white transition-colors"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-xs font-bold uppercase tracking-wider text-burgundy mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="maya@studio.com"
+                    class="w-full px-4 py-3 rounded-2xl bg-buttermilk-light border-2 border-burgundy text-burgundy placeholder-burgundy/40 text-sm focus:outline-none focus:bg-white transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  class="block text-xs font-bold uppercase tracking-wider text-burgundy mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  required
+                  placeholder="Inquiry / Web Project / Hello"
+                  class="w-full px-4 py-3 rounded-2xl bg-buttermilk-light border-2 border-burgundy text-burgundy placeholder-burgundy/40 text-sm focus:outline-none focus:bg-white transition-colors"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-xs font-bold uppercase tracking-wider text-burgundy mb-2"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  placeholder="Tell me about your idea or project timeline..."
+                  class="w-full px-4 py-3 rounded-2xl bg-buttermilk-light border-2 border-burgundy text-burgundy placeholder-burgundy/40 text-sm focus:outline-none focus:bg-white transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full py-4 px-6 rounded-full font-bold text-xs uppercase tracking-widest bg-burgundy hover:bg-burgundy-light text-buttermilk border-2 border-burgundy vintage-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all flex items-center justify-center gap-2 group"
+              >
+                <span>Send Message</span>
+                <i
+                  data-lucide="send"
+                  class="w-4 h-4 text-pastel-blue group-hover:translate-x-1 transition-transform"
+                ></i>
+              </button>
+            </form>
+
+            <!-- Toast Notification -->
+            <div
+              id="toast-notification"
+              class="hidden absolute top-4 right-4 max-w-sm bg-buttermilk border-2 border-burgundy text-burgundy p-4 rounded-2xl vintage-shadow flex items-center gap-3 transition-all duration-300 z-30"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-pastel-blue border border-burgundy text-burgundy flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h5 class="text-xs font-bold uppercase tracking-wider">
+                  Letter Received
+                </h5>
+                <p class="text-[11px] text-burgundy-muted">
+                  Thank you! Your message has arrived and I will reply soon.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="project-modal"
+      class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-burgundy/60 backdrop-blur-sm"
+    >
+      <div
+        class="relative w-full max-w-2xl bg-buttermilk-light border-2 border-burgundy rounded-3xl vintage-shadow p-6 sm:p-8 max-h-[90vh] overflow-y-auto"
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex items-center justify-between pb-4 border-b-2 border-burgundy/20"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              id="modal-icon"
+              class="w-10 h-10 rounded-2xl bg-pastel-blue border-2 border-burgundy flex items-center justify-center text-burgundy"
+            >
+              <i data-lucide="folder" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3
+                id="modal-title"
+                class="font-serif font-bold text-xl text-burgundy"
+              >
+                Project Title
+              </h3>
+              <p
+                id="modal-category"
+                class="text-xs font-bold uppercase tracking-wider text-burgundy-muted"
+              >
+                Category
+              </p>
+            </div>
+          </div>
+          <button
+            onclick="closeModal()"
+            class="p-2 rounded-xl text-burgundy hover:bg-buttermilk border border-burgundy transition-colors"
+            aria-label="Close modal"
+          >
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="py-6 space-y-4">
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mb-1"
+            >
+              Overview & Context
+            </h4>
+            <p
+              id="modal-desc"
+              class="text-sm text-burgundy leading-relaxed"
+            ></p>
+          </div>
+
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mb-2"
+            >
+              Key Highlights
+            </h4>
+            <ul
+              id="modal-highlights"
+              class="space-y-1.5 text-xs sm:text-sm text-burgundy list-disc list-inside"
+            ></ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mb-2"
+            >
+              Technologies Used
+            </h4>
+            <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <div id="modal-paper" class="hidden">
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-burgundy-muted mb-2"
+            >
+              Research Paper
+            </h4>
+
+            <!-- Preview PDF: hanya di layar besar, karena di HP biasanya tidak tampil -->
+            <div
+              class="hidden md:block rounded-2xl overflow-hidden border-2 border-burgundy bg-white"
+            >
+              <iframe
+                id="modal-paper-frame"
+                src=""
+                title="Journal preview"
+                class="w-full h-[360px]"
+              ></iframe>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mt-3">
+              <a
+                id="modal-paper-read"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-pastel-blue text-burgundy border-2 border-burgundy vintage-shadow-sm inline-flex items-center gap-2"
+              >
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i
+                ><span>Read Paper</span>
+              </a>
+              <a
+                id="modal-paper-download"
+                href="#"
+                download
+                class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-burgundy border-2 border-burgundy vintage-shadow-sm inline-flex items-center gap-2"
+              >
+                <i data-lucide="download" class="w-3.5 h-3.5"></i
+                ><span>Download PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="pt-4 border-t-2 border-burgundy/20 flex justify-end gap-3">
+          <button
+            onclick="closeModal()"
+            class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white hover:bg-buttermilk text-burgundy border-2 border-burgundy transition-colors"
+          >
+            Close
+          </button>
+          <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer"
+          class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-burgundy hover:bg-burgundy-light text-buttermilk border-2 border-burgundy transition-colors inline-flex items-center gap-1.5">
+          <span id="modal-link-label">Source Code</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5 text-pastel-blue"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="border-t-2 border-burgundy bg-buttermilk py-10 px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <div class="flex items-center gap-3">
+          <p class="text-xs font-medium text-burgundy">
+            &copy; <span id="copyright-year">2026</span> Audrey Cecilia
+          </p>
+        </div>
+
+        <div
+          class="flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-burgundy"
+        >
+          <a href="#home" class="hover:underline flex items-center gap-1">
+            <span>Top</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Copyright Dynamic Year
+      document.getElementById("copyright-year").textContent =
+        new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      mobileToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Project Filter System
+      const filterButtons = document.querySelectorAll(".project-filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter");
+
+          // Reset all buttons to default white
+          filterButtons.forEach((b) => {
+            b.classList.remove(
+              "bg-burgundy",
+              "text-buttermilk",
+              "vintage-shadow-sm",
+            );
+            b.classList.add("bg-white", "text-burgundy");
+          });
+
+          // Activate clicked button
+          btn.classList.add(
+            "bg-burgundy",
+            "text-buttermilk",
+            "vintage-shadow-sm",
+          );
+          btn.classList.remove("bg-white", "text-burgundy");
+
+          // Filter cards
+          projectCards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        });
+      });
+
+      // Modal Case Study Data
+      const projectData = {
+        petcare: {
+          title: "PetCareHub Clinic Management",
+          category: "Fullstack Web Application",
+          desc: "Designed to modernize veterinary clinic administration. The system handles patient appointments, pet vaccination calendars, billing invoices, and drug inventory control with role-based access control (Admin, Doctor, Pet Owner).",
+          highlights: [
+            "Role-based authentication & session controls for veterinarians and pet owners",
+            "Automated prescription and treatment record logs",
+            "Inventory stock-warning triggers based on clinic thresholds",
+            "Responsive client portal for rescheduling and viewing diagnosis summaries",
+          ],
+          tags: ["Figma", "HTML", "PHP", "MySQL"],
+          link: "https://porto.page.gd/frontend/",
+        },
+        weather: {
+          title: "Analisis Tren Historis Unsur Meteorologi Di Kota Cirebon Menggunakan Metode Korelasi Pearson dan Regresi Linear Sederhana",
+          category: "Data Science & Exploratory Analysis",
+          desc: "A statistical analytics project investigating long-term atmospheric patterns in Cirebon. Aggregated hourly precipitation and temperature data to evaluate seasonal shifts, dry spells, and rainfall anomalies.",
+          highlights: [
+            "Automated missing-value imputation and outlier sanitization with Pandas",
+            "Seasonal trend decomposition and rolling averages for rainfall probability",
+            "Visualization reports using Matplotlib & Seaborn heatmap correlation matrix",
+            "Delivered interactive Jupyter notebooks documenting key findings",
+          ],
+          tags: [
+            "Python",
+            "Pandas",
+            "Matplotlib",
+            "Seaborn",
+          ],
+          paper: "JurnalCuacaCirebon.pdf"
+        },
+        dwh: {
+          title: "Retail Data Warehouse & ETL",
+          category: "Group Project · Database Warehouse & BI",
+          desc: "Built a dimensional data warehouse in SQL Server for a case-study retail company whose POS, inventory, loyalty, and finance data were siloed, to support customer retention analysis. Group project (team of 4). My role: set up the database, schemas, and tables, and implemented the core ETL process, from data cleansing and standardization to initial and incremental loads and Slowly Changing Dimensions.",
+          highlights: [
+            "Created the data warehouse database with three schemas (Ekstraksi, Transformasi, Loading) and its tables",
+            "Cleaned and standardized source data: missing values, extra spaces, negative points, cancelled sales, and inconsistent product names",
+            "Built the initial load for the sales fact table and the customer and product dimensions using surrogate keys",
+            "Implemented an incremental load that only inserts new customer point records",
+            "Applied SCD Type 1 to customer and product attributes, and SCD Type 2 to track membership level history",
+            "Team result: repeat purchases stayed between 496 and 568 transactions per month in 2025"
+          ],
+          tags: ["SQL Server", "T-SQL", "ETL", "Data Cleansing", "SCD", "SSMS"],
+          link: "https://github.com/dreyyy12/retail-data-warehouse",
+          paper: "Laporan_Proyek_DW.pdf"
+        },
+        lalala: {
+          title: "Lalala Festival Interface Design",
+          category: "UI/UX & Interactive Frontend",
+          desc: "An engaging web concept for an outdoor music and arts festival. Emphasizes visual hierarchy, artist lineups, timetable scheduling, and an accessible multi-tier ticket purchasing flow.",
+          highlights: [
+            "Developed a responsive front-end web layout using HTML and CSS with design tokens",
+            "Implemented schedule filtering by stage venue and genre",
+            "Optimized interactive card micro-animations and typography",
+          ],
+          tags: ["HTML", "CSS"],
+          link: "https://dreyyy12.github.io/concert-website/",
+        },
+      };
+
+      const modal = document.getElementById("project-modal");
+      const modalTitle = document.getElementById("modal-title");
+      const modalCategory = document.getElementById("modal-category");
+      const modalDesc = document.getElementById("modal-desc");
+      const modalHighlights = document.getElementById("modal-highlights");
+      const modalTags = document.getElementById("modal-tags");
+      const modalLink = document.getElementById("modal-link");
+
+      const paperBox = document.getElementById('modal-paper');
+      const paperFrame = document.getElementById('modal-paper-frame');
+      const paperRead = document.getElementById('modal-paper-read');
+      const paperDownload = document.getElementById('modal-paper-download');
+
+      function openModal(projectId) {
+        const data = projectData[projectId];
+        if (!data) return;
+
+        modalTitle.textContent = data.title;
+        modalCategory.textContent = data.category;
+        modalDesc.textContent = data.desc;
+
+        modalHighlights.innerHTML = "";
+        data.highlights.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          modalHighlights.appendChild(li);
+        });
+
+        modalTags.innerHTML = "";
+        data.tags.forEach((tag) => {
+          const span = document.createElement("span");
+          span.className =
+            "px-3 py-1 rounded-full text-xs font-semibold bg-white border border-burgundy text-burgundy";
+          span.textContent = tag;
+          modalTags.appendChild(span);
+        });
+
+        const modalLinkLabel = document.getElementById('modal-link-label');
+        if (data.link) {
+          modalLink.href = data.link;
+          modalLinkLabel.textContent = data.linkLabel || 'Source Code';
+        }
+        modalLink.style.display = data.link ? 'inline-flex' : 'none';
+
+        if (data.paper) {
+          paperBox.classList.remove('hidden');
+          paperFrame.src = data.paper + '#toolbar=0&view=FitH';
+          paperRead.href = data.paper;
+          paperDownload.href = data.paper;
+        } else {
+          paperBox.classList.add('hidden');
+          paperFrame.src = '';
+        }
+
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        lucide.createIcons();
+      }
+
+      function closeModal() {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "";
+
+        paperFrame.src = '';
+      }
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden"))
+          closeModal();
+      });
+
+      // Contact Form submission feedback
+      const contactForm = document.getElementById("portfolio-contact-form");
+      const toast = document.getElementById("toast-notification");
+      const submitBtn = document.getElementById("submit-btn");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const originalHtml = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>Sending Message...</span>`;
+
+        setTimeout(() => {
+          contactForm.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHtml;
+
+          toast.classList.remove("hidden");
+          lucide.createIcons();
+
+          setTimeout(() => {
+            toast.classList.add("hidden");
+          }, 4000);
+        }, 700);
+      });
+
+      function downloadResumeNotice() {
+        const toast = document.getElementById("toast-notification");
+        toast.querySelector("h5").textContent = "Resume Requested";
+        toast.querySelector("p").textContent =
+          "CV file download triggered. (Preview mode)";
+        toast.classList.remove("hidden");
+        lucide.createIcons();
+        setTimeout(() => {
+          toast.classList.add("hidden");
+          toast.querySelector("h5").textContent = "Letter Received";
+          toast.querySelector("p").textContent =
+            "Thank you! Your message has arrived and I will reply soon.";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
